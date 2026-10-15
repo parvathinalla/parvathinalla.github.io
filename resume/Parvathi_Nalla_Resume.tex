@@ -1,0 +1,94 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[top=0.55in,bottom=0.55in,left=0.55in,right=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,enumitem,titlesec,xcolor}
+\usepackage[hidelinks]{hyperref}
+\definecolor{navy}{HTML}{243B59}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\emergencystretch}{1.8em}
+\hypersetup{pdftitle={Parvathi Nalla - Software Engineer},pdfauthor={Parvathi Nalla},pdfsubject={Software Engineer Resume - Infrastructure, Backend and Applied AI}}
+\titleformat{\section}{\color{navy}\bfseries\fontsize{10.8}{11.5}\selectfont}{}{0pt}{}[\color{navy}\titlerule]
+\titlespacing*{\section}{0pt}{2.0pt}{1.0pt}
+\setlist[itemize]{leftmargin=0.15in,label=\textbullet,nosep,topsep=0pt,parsep=0pt,itemsep=0pt}
+\newcommand{\workEntry}[4]{%
+  \textbf{#1} \textbar{} \textbf{#2}\hfill\textbf{#4}\\[-1.0pt]
+  \textit{#3}\par\vspace{-1.3pt}
+}
+\newcommand{\schoolEntry}[4]{%
+  \textbf{#1}\hfill\textbf{#4}\\[-1pt]
+  \textit{#2}\hfill\textit{#3}\par\vspace{-1.3pt}
+}
+\newcommand{\projEntry}[2]{\textbf{#1}\hfill\textit{#2}\vspace{-1.0pt}}
+\begin{document}
+\fontsize{10.2}{11.35}\selectfont
+\begin{center}
+  {\color{navy}\fontsize{18}{20}\selectfont\bfseries PARVATHI NALLA}\\[2pt]
+  Gainesville, FL \quad $\vert$ \quad +1-352-256-1277 \quad $\vert$ \quad \href{mailto:parvathinalla@ufl.edu}{parvathinalla@ufl.edu} \quad $\vert$ \quad \href{https://www.linkedin.com/in/parvathinallauf}{\underline{LinkedIn}} \quad $\vert$ \quad \href{https://github.com/parvathinalla}{\underline{GitHub}}
+\end{center}
+\vspace{-10pt}
+
+\section{Education}
+\schoolEntry{University of Florida}{Master of Science in Computer Science}{Gainesville, FL}{Aug 2025 -- Expected May 2027}
+\textbf{Relevant Coursework:} Advanced Data Structures, Analysis of Algorithms, Distributed Operating Systems, Information Retrieval / NLP\par
+\vspace{1pt}
+\schoolEntry{Rajiv Gandhi University of Knowledge Technologies}{Bachelor of Technology in Computer Science and Engineering}{RK Valley, India}{Aug 2018 -- May 2022}
+
+\section{Technical Skills}
+\textbf{Programming:} Java, Python, C++, Go, JavaScript/TypeScript, SQL, Bash\\
+\textbf{Web, Backend \& Data:} React, Angular, Node.js/Express, Django, FastAPI, REST APIs, gRPC, PostgreSQL, MySQL, MongoDB, DynamoDB\\
+\textbf{Platforms \& Quality:} Kubernetes, Docker, AWS (Lambda, S3, CloudWatch), Apache Kafka, Git, CI/CD, Jenkins, Unit/Integration Testing, Prometheus, Grafana, ELK\\
+\textbf{AI/ML:} PyTorch, LangChain, OpenAI APIs, FAISS, Retrieval-Augmented Generation (RAG)
+
+\section{Professional Experience}
+\workEntry{Google}{Software Development Intern}{Sunnyvale, California}{May 2026 -- Aug 2026}
+\begin{itemize}
+  \item Migrated GKE Gateway Controller components to strongly typed Kubernetes APIs, supporting \textbf{10,000+ concurrent routing resources} while removing reflection-heavy dynamic clients.
+  \item Built a translation layer for a caching upgrade affecting \textbf{50+ reconcilers}, enabling feature-flagged dual-path testing, rollback, and migration \textbf{without production downtime}.
+  \item Refactored Go allocations and eliminated redundant JSON processing, yielding an estimated \textbf{40\% lower peak heap memory} and \textbf{30\% faster CPU resynchronization}.
+\end{itemize}
+\vspace{0pt}
+\workEntry{Freightify}{Software Development Engineer}{India}{Apr 2024 -- Jul 2025}
+\begin{itemize}
+  \item Developed a real-time Apache Kafka and AWS Lambda pipeline, \textbf{reducing latency by 25\%} while supporting \textbf{2$\times$ daily data volume}.
+  \item Delivered backend APIs for a freight quotation product used by \textbf{5,000+ customers} to compare carrier prices; implemented configurable discount and eligibility rules.
+  \item Standardized unit, integration, contract, and end-to-end testing across \textbf{20+ services}, raising \textbf{automated test coverage to 85\%}.
+  \item Instrumented services with Prometheus, Grafana, SLIs/SLOs, and alerts, \textbf{reducing mean time to detect by 47\%}.
+\end{itemize}
+\vspace{0pt}
+\workEntry{PromptCloud}{Software Development Engineer}{India}{Jun 2022 -- Apr 2024}
+\begin{itemize}
+  \item Designed parallel ETL workflows to \textbf{increase data throughput by 50\%}; optimized processing algorithms to \textbf{reduce execution time by 80\%}.
+  \item Implemented ELK monitoring across production services, \textbf{reducing incident detection time by 65\%}; automated deployment tasks to \textbf{reduce manual release effort by 30\%}.
+\end{itemize}
+\vspace{0pt}
+\workEntry{PromptCloud}{Software Development Intern}{India}{Nov 2021 -- Jun 2022}
+\begin{itemize}
+  \item Built data-processing pipelines for \textbf{750+ GB} of raw data using schema validation, deduplication, and outlier checks.
+  \item Developed crawlers for \textbf{50+} JavaScript-rendered websites with rate limiting, proxy rotation, session handling, and failure recovery.
+\end{itemize}
+
+\section{Projects}
+\projEntry{\href{https://github.com/parvathinalla/pointlab}{\underline{PointLab}} (Oct 2026 -- Present)}{Python, PyTorch, JavaScript \textbar{} \href{https://github.com/parvathinalla/pointlab}{\underline{GitHub}}}
+\begin{itemize}
+  \item Developed an interactive 3D LiDAR explorer with geometric patch inspection, masking controls, and reproducible FPS-versus-random sampling benchmarks; includes three research notebooks.
+\end{itemize}
+\vspace{0pt}
+\projEntry{\href{https://github.com/parvathinalla/reddit_gleam}{\underline{Distributed Social Platform}}}{Gleam, Erlang/OTP, ETS \textbar{} \href{https://github.com/parvathinalla/reddit_gleam}{\underline{GitHub}}}
+\begin{itemize}
+  \item Built an actor-based social application with messaging, feeds, voting, OTP supervision for fault tolerance, and benchmarks for up to \textbf{1,000 simulated users}.
+\end{itemize}
+
+\section{Research Experience}
+\workEntry{University of Florida}{Graduate Research and Teaching Assistant}{Gainesville, FL \textbar{} Financial NLP \textbar{} Prof. Johannes (Joost) Impink}{Jul 2025 -- May 2026}
+\begin{itemize}
+  \item Built a Python RAG pipeline using LangChain, OpenAI embeddings, and FAISS to analyze goodwill disclosures from \textbf{500+ SEC filings}.
+  \item \textbf{Independent extension -- \href{https://github.com/parvathinalla/goodwill-atlas}{\underline{Goodwill Atlas}}:} Developed a FastAPI research application with source-linked extraction, optional FAISS retrieval, and automated evaluation on \textbf{36 synthetic labels}. \href{https://github.com/parvathinalla/goodwill-atlas}{\underline{GitHub}}
+\end{itemize}
+\vspace{0pt}
+\workEntry{University of Florida}{Graduate Research and Teaching Assistant}{Gainesville, FL \textbar{} Autonomous Driving \textbar{} Prof. Ivan Ruchkin}{Jul 2025 -- May 2026}
+\begin{itemize}
+  \item Developed PyTorch/Open3D perception experiments combining RGB images with \textbf{32K+ LiDAR points per frame} on nuScenes.
+\end{itemize}
+\end{document}
